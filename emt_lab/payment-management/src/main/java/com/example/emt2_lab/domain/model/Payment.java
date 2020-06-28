@@ -21,6 +21,9 @@ import java.util.Objects;
 @Table(name = "payments")
 public class Payment extends AbstractEntity<PaymentId> {
 
+    @EmbeddedId
+    private PaymentId id;
+    
     @Version
     private Long version;
 
