@@ -10,6 +10,8 @@ import javax.persistence.Enumerated;
 import java.util.Objects;
 // import java.util.Currency;
 
+import javax.validation.constraints.PositiveOrZero;
+
 @Embeddable
 @Getter
 /* @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -21,6 +23,7 @@ public class Money implements ValueObject {
     private final Currency currency;
 
     @NonNull
+   // @PositiveOrZero
     private final Integer amount;
 
     private Money() {
