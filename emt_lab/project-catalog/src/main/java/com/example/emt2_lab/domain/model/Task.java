@@ -30,9 +30,13 @@ public class Task extends AbstractEntity<TaskId> {
     private String name;
 
     @Column(name="start_date")
+    /* @Temporal(TemporalType.TIMESTAMP)
+    @PastOrPresent */
     private LocalDateTime startDate;
 
     @Column(name="deadline")
+    /* @Temporal(TemporalType.TIMESTAMP)
+    @FutureOrPresent */
     private LocalDateTime deadline;
 
     @NonNull
