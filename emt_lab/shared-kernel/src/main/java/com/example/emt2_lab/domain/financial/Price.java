@@ -9,6 +9,8 @@ import org.springframework.lang.NonNull;
 
 import java.util.Objects;
 
+import javax.validation.constraints.PositiveOrZero;
+
 // @AllArgsConstructor
 public class Price implements ValueObject {
 
@@ -17,6 +19,7 @@ public class Price implements ValueObject {
     private final Currency currency;
 
     @JsonProperty("amount")
+    // @PositiveOrZero
     private final Integer amount;
 
     @JsonCreator
