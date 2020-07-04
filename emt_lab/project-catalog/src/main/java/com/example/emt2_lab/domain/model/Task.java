@@ -7,6 +7,8 @@ import lombok.*;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.FutureOrPresent;
 import java.time.LocalDateTime;
 
 /* @NoArgsConstructor(access = AccessLevel.PRIVATE)
