@@ -40,11 +40,13 @@ public class Project extends AbstractEntity<ProjectId> {
     private String description;
 
     @Column(name = "start_date")
-    // @PastOrPresent
+    /* @Temporal(TemporalType.TIMESTAMP)
+    @PastOrPresent */
     private LocalDateTime startDate;
 
     @Column(name="deadline")
-    // @FutureOrPresent
+    /* @Temporal(TemporalType.TIMESTAMP)
+    @FutureOrPresent */
     private LocalDateTime deadline;
 
     @Column(name = "finished")
