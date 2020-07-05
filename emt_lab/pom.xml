@@ -24,6 +24,12 @@
         <wavefront.version>2.0.0-SNAPSHOT</wavefront.version>
     </properties>
 
+    <modules>
+        <module>project-catalog</module>
+        <module>payment-management</module>
+        <module>shared-kernel</module>
+    </modules>     
+         
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
