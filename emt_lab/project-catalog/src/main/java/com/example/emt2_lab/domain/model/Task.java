@@ -54,6 +54,7 @@ public class Task extends AbstractEntity<TaskId> {
     @NonNull
     @Column(name="price", nullable = false)
     @JsonProperty("price")
+    @Embedded
     private Money price;
 
     @Column(name="finished")
