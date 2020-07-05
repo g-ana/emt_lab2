@@ -2,6 +2,7 @@ package com.example.emt2_lab.domain.model;
 
 import com.example.emt2_lab.domain.base.AbstractEntity;
 import com.example.emt2_lab.domain.financial.Currency;
+import com.example.emt2_lab.domain.financial.Money;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 import org.dom4j.tree.AbstractEntity;
@@ -36,7 +37,8 @@ public class Payment extends AbstractEntity<PaymentId> {
     @Column(name = "price", nullable = false)
 //    @Enumerated(EnumType.STRING)
     @JsonProperty("price")
-    private Price price;
+    @Embedded
+    private Money price;
 
     @NonNull
     @Column(name = "payment_state", nullable = false)
