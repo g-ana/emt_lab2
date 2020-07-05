@@ -20,19 +20,19 @@ public class Address implements ValueObject {
     @NonNull
     @JsonProperty("address")
     @Column(name="address")
-    private String address;
+    private final String address;
 
     @NonNull
     @JsonProperty("city")
     @Column(name = "city", nullable = false)
     @Embedded
-    private CityName city;
+    private final CityName city;
 
     @NonNull
     @JsonProperty("country")
     @Column(name = "country", nullable = false)
     @Enumerated(EnumType.STRING)
-    private Country country;
+    private final Country country;
 
     @SuppressWarnings("unused")
     protected Address() {
