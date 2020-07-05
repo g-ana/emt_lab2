@@ -19,7 +19,7 @@ import java.util.Objects;
 public abstract class AbstractEntity<ID extends DomainObjectId> implements IdentifiableDomainObject<ID> {
 
     @EmbeddedId
-    private ID id;
+    protected ID id;
 
     public AbstractEntity() {
 
