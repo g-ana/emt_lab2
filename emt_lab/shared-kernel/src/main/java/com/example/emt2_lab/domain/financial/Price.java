@@ -12,6 +12,7 @@ import java.util.Objects;
 import javax.validation.constraints.PositiveOrZero;
 
 // @AllArgsConstructor
+@Embeddable
 public class Price implements ValueObject {
 
     @JsonProperty("currency")
