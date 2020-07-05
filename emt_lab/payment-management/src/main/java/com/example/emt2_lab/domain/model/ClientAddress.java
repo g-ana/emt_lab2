@@ -18,6 +18,7 @@ public class ClientAddress extends Address {
 
     @NonNull
     @Column(name = "client_name", nullable = false)
+    @Embedded
     private ClientFullName fullName;
 
     @SuppressWarnings("unused")
