@@ -61,6 +61,7 @@ public class Project extends AbstractEntity<ProjectId> {
     @NonNull
     @Column(name="price", nullable = false)
     @JsonProperty("price")
+    @Embedded
     private Money price;
 
     @OneToMany(mappedBy = "tasks", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
