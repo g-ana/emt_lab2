@@ -9,6 +9,7 @@ import org.hibernate.annotations.Where;
 import javax.persistence.*;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.PositiveOrZero;
 import java.time.LocalDateTime;
 
 /* @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -49,6 +50,7 @@ public class Task extends AbstractEntity<TaskId> {
     @NonNull
     @Column(name="hours", nullable = false)
     @JsonProperty("hours")
+    // @PositiveOrZero
     private Integer hours;
 
     @NonNull
