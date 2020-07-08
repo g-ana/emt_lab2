@@ -9,7 +9,7 @@ import org.springframework.transaction.event.TransactionalEventListener;
 
 @Service
 // @AllArgsConstructor
-public class DomainEventLogAdapter {
+public class DomainEventLogAppender {
 
     private final DomainEventLogService domainEventLogService;
 
