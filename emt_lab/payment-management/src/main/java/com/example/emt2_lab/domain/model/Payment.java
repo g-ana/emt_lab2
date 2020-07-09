@@ -59,9 +59,9 @@ public class Payment extends AbstractEntity<PaymentId> {
 
     public Project addProject(@NonNull Project project, int quantity) {
         Objects.requireNonNull(project, "Project must not be null. ");
-        Project p=new Project(project, quantity);
-        this.projects.add(p);
-        return p;
+   //     Project p=new Project(project, quantity);
+        this.projects.add(project);
+        return project;
     }
 
     public Money total() {
@@ -75,7 +75,7 @@ public class Payment extends AbstractEntity<PaymentId> {
         this.setState(PaymentState.RECEIVED);
     }
 
-    public Payment(@NonNull Instant payedOn, @NonNull Price price, @NonNull ClientAddress clientAddress) {
+    public Payment(@NonNull Instant payedOn, @NonNull Money price, @NonNull ClientAddress clientAddress) {
         super(DomainObjectId.randomId(PaymentId.class));
         this.projects=new HashSet<Project>();
         this.setState(PaymentState.RECEIVED);
@@ -90,7 +90,7 @@ public class Payment extends AbstractEntity<PaymentId> {
     }
 
     @NonNull
-    public Price price() {
+    public Money price() {
         return this.price;
     }
 
