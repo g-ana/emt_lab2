@@ -152,6 +152,10 @@ public class Project extends AbstractEntity<ProjectId> {
         return this.employees;
     }
 
+    public void finish() {
+        this.finished=true;
+    }
+    
     @NonNull
     public Task addTask(@NonNull Task task) {
         Objects.requireNonNull(task, "Task must not be null. ");
