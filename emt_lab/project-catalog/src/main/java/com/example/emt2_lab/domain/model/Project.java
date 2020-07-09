@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Stream;
 
 /* @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @AllArgsConstructor */
@@ -138,18 +139,18 @@ public class Project extends AbstractEntity<ProjectId> {
     }
 
     @NonNull
-    public Set<Task> tasks() {
-        return this.tasks;
+    public Stream<Task> tasks() {
+        return this.tasks.stream();
     }
 
     @NonNull
-    public Set<Client> clients() {
-        return this.clients;
+    public Stream<Client> clients() {
+        return this.clients.stream();
     }
 
     @NonNull
-    public Set<Employee> employees() {
-        return this.employees;
+    public Stream<Employee> employees() {
+        return this.employees.stream();
     }
 
     public void finish() {
