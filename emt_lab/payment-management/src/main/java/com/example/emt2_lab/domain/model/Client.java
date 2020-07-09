@@ -93,6 +93,10 @@ public class Client extends AbstractEntity<ClientId> {
     public String telephoneNumber() {
         return this.telephoneNumber;
     }
+    
+    public void changeStatus() {
+        this.isActive=!isActive;
+    }
 
     public Stream<Project> projects() {
         return this.projects.stream();
